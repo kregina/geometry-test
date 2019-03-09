@@ -1,0 +1,28 @@
+:root{
+    --triangle-color: red;
+}
+
+html, 
+body, 
+#canvas {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.circle {
+    stroke: var(--triangle-color);
+    stroke-width: 1;
+    fill: none;
+}
+
+.polygon{
+    stroke: blue;
+    stroke-width: 1;
+    fill: none;
+}
