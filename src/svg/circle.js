@@ -7,5 +7,6 @@ export const circle = ([x, y], r, color) => {
   circle.setAttributeNS(null, 'r', r);
   circle.classList.add('circle');
   circle.style.setProperty('--circle-color', color);
+
   return circle;
 }

@@ -1,5 +1,7 @@
 export const area = ([[ax, ay], [bx, by], [cx, cy]]) =>
-  ax * (by - cy) +
-  bx * (cy - ay) +
-  cx * (ay - by)
+  Math.abs(
+    ax * (by - cy) +
+    bx * (cy - ay) +
+    cx * (ay - by))
+  / 2
 

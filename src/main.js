@@ -7,6 +7,9 @@ let interactions = [];
 
 const canvas = document.getElementById('canvas');
 canvas.addEventListener('click', clickHandler);
+const areaParalelogramDiv = document.getElementById('area-paralelogram');
+const areaCircleDiv = document.getElementById('area-circle');
+const canvasInfo = document.getElementById('canvas-info');
 
 function clickHandler(event) {
   const position = Svg.relativePositionFrom(canvas, event);
@@ -20,11 +23,16 @@ function clickHandler(event) {
     canvas.appendChild(polygon);
 
     const center = Paralelogram.center(paralelogramPoints);
- 
-    const area = Triangle.area(trianglePoints);
-    const ratio = Circle.ratio(area);
+
+    const triangleArea = Triangle.area(trianglePoints);
+    const paralelogramArea = triangleArea * 2;
+    const ratio = Circle.ratio(paralelogramArea);
 
     const paralelogramCircle = Svg.circle(center, ratio, '#FFC107');
+
+    areaParalelogramDiv.innerHTML = `Paralelogram Area: ${paralelogramArea.toFixed(2)}`;
+    areaCircleDiv.innerHTML = `Yellow Circle Area: ${paralelogramArea.toFixed(2)}`;
+    canvasInfo.style.setProperty('--display-canvas-info', 'block');
 
     canvas.appendChild(paralelogramCircle);
   }
@@ -34,5 +42,7 @@ function clickHandler(event) {
   }
 
   const circle = Svg.circle(position, 11, '#D50000');
+  const coordinatesCircle = Svg.createText(position);
   canvas.appendChild(circle);
+  canvas.appendChild(coordinatesCircle);
 }
