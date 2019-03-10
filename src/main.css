@@ -166,19 +166,28 @@ section .container i {
   margin: 0;
 }
 
-.canvas-container .info{
-  display: flex;
-  justify-content: space-between;
-}
-
 .canvas-container #canvas-info {
   display: var(--display-canvas-info);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.canvas-container ul {
+  margin: 0;
 }
 
 .canvas-container .button{
   background: var(--dark-color);
-  color: rgb(var(--primary-color));
   border: none;
+  border-radius: 0.5em;
+  color: white;
+  cursor: pointer;
+  padding: 0.8em 1em;
+  transition: 0.4s;
+}
+
+.canvas-container .button:hover{
+  color: rgb(var(--primary-color));
 }
 
 .text{

@@ -10,6 +10,13 @@ canvas.addEventListener('click', clickHandler);
 const areaParalelogramDiv = document.getElementById('area-paralelogram');
 const areaCircleDiv = document.getElementById('area-circle');
 const canvasInfo = document.getElementById('canvas-info');
+const resetButton = document.getElementById('reset-button');
+
+resetButton.onclick = _ => {
+  interactions = [];
+  canvas.innerHTML = '';
+  canvasInfo.style.setProperty('--display-canvas-info', 'none');
+}
 
 function clickHandler(event) {
   const position = Svg.relativePositionFrom(canvas, event);
@@ -32,7 +39,7 @@ function clickHandler(event) {
 
     areaParalelogramDiv.innerHTML = `Paralelogram Area: ${paralelogramArea.toFixed(2)}`;
     areaCircleDiv.innerHTML = `Yellow Circle Area: ${paralelogramArea.toFixed(2)}`;
-    canvasInfo.style.setProperty('--display-canvas-info', 'block');
+    canvasInfo.style.setProperty('--display-canvas-info', 'flex');
 
     canvas.appendChild(paralelogramCircle);
   }
