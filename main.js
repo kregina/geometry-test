@@ -21,11 +21,11 @@ function clickHandler(event) {
 
     const [a, b, c] =  trianglePoints;
     const area = a.x * (b.y - c.y) + b.x * (c.y - a.y) + c.x * (a.y - b.y)
-    const ratio = Math.sqrt(area / 3.14);
-    
+    const ratio = Math.sqrt(Math.abs(area) / 3.14);
+
     const paralelogramCircle = createCircle(center.x, center.y, ratio, 'yellow');
 
-    svg.appendChild(paralelogramCircle);    
+    svg.appendChild(paralelogramCircle);
   }
 
   if(interactions.length > 3) {
@@ -34,5 +34,5 @@ function clickHandler(event) {
 
   const circle = createCircle(position.x, position.y, 11, 'red');
   svg.appendChild(circle);
-  
+
 }
