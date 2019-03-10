@@ -1,16 +1,28 @@
+/** CSS Variables **/
 :root{
-    --body-color: #FAFAFA;
+    --body-background: #e9e9e9;
+    --section-background: white;
     --primary-color: 248, 187, 208;
     --triangle-color: red;
 }
 
+/** Global Settings **/
+html{
+    scroll-behavior: smooth;
+}
+
 html,
-body,
-#canvas {
+body {
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
+}
+
+body{
+    background: var(--body-background);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
 }
 
 * {
@@ -22,12 +34,7 @@ a {
     color: white;
 }
 
-body{
-    background: var(--body-color);
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-}
-
+/** Header **/
 header{
     background: black;
     color: white;
@@ -43,10 +50,12 @@ header{
                 0 1px 18px 0 rgba(0,0,0,.12);
 }
 
+/** Header > brand **/
 .brand{
     font-size: 2em;
 }
 
+/** Header > nav**/
 nav{
     display: flex;
     flex-direction: row;
@@ -90,6 +99,36 @@ nav a span{
     display: none;
 }
 
+/** Section **/
+section{
+    height: 100%;
+    padding: 10em 2em 0 2em;
+}
+
+section#play{
+    background: var(--section-background);
+}
+
+section h2{
+
+    font-size: 2em;
+    text-align: center;
+}
+
+section h2::after{
+    background: black;
+    content: '';
+    display: block;
+    height: .2em;
+    margin: .3em auto;
+    width: 1.5em;
+}
+
+#canvas{
+    height: 100%;
+    width: 100%;
+}
+
 .circle {
     stroke: var(--triangle-color);
     stroke-width: 1;
@@ -102,6 +141,7 @@ nav a span{
     fill: none;
 }
 
+/** Desktop Settings **/
 @media only screen and (min-width: 600px) {
     header{
         flex-direction: row;
@@ -113,5 +153,9 @@ nav a span{
 
     nav a span{
         display: block;
+    }
+
+    section{
+        padding: 6em 2em 0 2em;
     }
   }
