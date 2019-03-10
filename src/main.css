@@ -110,7 +110,6 @@ section#play{
 }
 
 section h2{
-
     font-size: 2em;
     text-align: center;
 }
@@ -122,6 +121,16 @@ section h2::after{
     height: .2em;
     margin: .3em auto;
     width: 1.5em;
+}
+
+section .content{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+section .content > * {
+    flex: 1 100%;
 }
 
 #canvas{
@@ -158,4 +167,9 @@ section h2::after{
     section{
         padding: 6em 2em 0 2em;
     }
+
+    section .content{
+        flex-wrap: initial;
+    }
+
   }
