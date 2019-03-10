@@ -2,7 +2,7 @@
 :root{
     --body-background: #e9e9e9;
     --section-background: white;
-    --primary-color: 248, 187, 208;
+    --primary-color: 233, 30, 99;
     --triangle-color: red;
 }
 
@@ -55,6 +55,10 @@ header{
     font-size: 2em;
 }
 
+.brand i {
+    color: rgb(var(--primary-color));
+}
+
 /** Header > nav**/
 nav{
     display: flex;
@@ -86,7 +90,6 @@ nav a:visited{
 .github:focus,
 nav a:hover,
 nav a:focus{
-    background: rgba(var(--primary-color), .2);
     color:rgb(var(--primary-color));
 }
 
@@ -101,8 +104,10 @@ nav a span{
 
 /** Section **/
 section{
-    height: 100%;
-    padding: 10em 2em 0 2em;
+    font-size: 1.18em;
+    min-height: 100%;
+    padding: 7em 2em 2em 2em;
+    width: 100%;
 }
 
 section#play{
@@ -115,22 +120,35 @@ section h2{
 }
 
 section h2::after{
-    background: black;
+    background: rgb(var(--primary-color));
     content: '';
     display: block;
     height: .2em;
     margin: .3em auto;
-    width: 1.5em;
+    width: 2em;
 }
 
-section .content{
+section .container{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
 }
 
-section .content > * {
+section .container > * {
     flex: 1 100%;
+}
+
+section .container a{
+    color: rgb(var(--primary-color));
+    font-weight: 500;
+}
+
+section .container i {
+    color: rgb(var(--primary-color));
+}
+
+.image-responsive{
+    width: 100%;
 }
 
 #canvas{
@@ -166,10 +184,16 @@ section .content > * {
 
     section{
         padding: 6em 2em 0 2em;
+        width: 80%;
+        margin: auto;
     }
 
-    section .content{
+    section .container{
         flex-wrap: initial;
+    }
+
+    section .content + .content {
+        margin-left: 2.5em;
     }
 
   }

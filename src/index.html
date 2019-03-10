@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" container="IE=edge" />
     <title>CMind</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" container="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500" rel="stylesheet" />
     <link
       rel="stylesheet"
@@ -53,30 +53,76 @@
     </header>
 
     <section id="read-me">
-        <h2>
-            <i class="fas fa-cog"></i>
-            <span>Readme</span>
-        </h2>
+      <h2>
+        <i class="fas fa-cog"></i>
+        <span>Readme</span>
+      </h2>
+      <h4>
+        The goal of this assignement is to code a simple game that the user interacts and draws some
+        geometrical shapes.
+      </h4>
+      <div class="container">
         <div class="content">
-            <p>hushausa</p>
-            <p>shuahsua</p>
+          <h3>How to play:</h3>
+          <p>
+              Click on 3 spots inside the marked space below and see the shapes and their coordinates.
+              You can drag the shapes along the space and the coordinates will be updated.
+              Besides the game has a button that you can clear the points.
+
+              <pre>Enjoy!</pre>
+          </p>
         </div>
+        <div class="content">
+          <h3>Features:</h3>
+          <ul>
+            <li>Mobile First. <i class="fas fa-mobile-alt"></i></li>
+            <li>ES6 Vanilla Javascript. <i class="fab fa-js"></i></li>
+            <li>
+              Native JavaScript modules on the browser. <i class="fab fa-chrome"></i>
+              <i class="fab fa-firefox"></i> <i class="fab fa-edge"></i>
+              <i class="fab fa-safari"></i>
+            </li>
+            <li>CSS variables. <i class="fab fa-css3-alt"></i></li>
+            <li>
+              Hamessing the power of the latest JavaScript and CSS feature without need of
+              pre-processors on modern browsers. <i class="fas fa-trophy"></i>
+            </li>
+            <li>
+              The only development dependency is
+              <a href="https://www.npmjs.com/package/http-server" target="_blank">http-server</a>
+              which is required when using <strong>&lt;script type="module"&gt;</strong>.
+              <i class="fas fa-server"></i>
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section id="play">
-        <h2>
-            <i class="fas fa-gamepad"></i>
-            <span>Play</span>
-        </h2>
-        <svg id="canvas"></svg>
+      <h2>
+        <i class="fas fa-gamepad"></i>
+        <span>Play</span>
+      </h2>
+      <svg id="canvas"></svg>
     </section>
 
     <section id="about">
-        <h2>
-            <i class="fas fa-glasses"></i>
-            <span>About Kelly</span>
-        </h2>
+      <h2>
+        <i class="fas fa-glasses"></i>
+        <span>About Kelly</span>
+      </h2>
+      <div class="container">
+        <figure>
+          <img
+            src="./images/me.jpg"
+            alt="Kelly Silva"
+            title="Kelly Silva"
+            class="image-responsive"
+          />
+          <figcaption>Me</figcaption>
+        </figure>
+        <p>huashaus</p>
+      </div>
     </section>
-
   </body>
 </html>
