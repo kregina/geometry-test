@@ -106,7 +106,7 @@ nav a span{
 section{
     font-size: 1.18em;
     min-height: 100%;
-    padding: 7em 2em 2em 2em;
+    padding: 7em 0 2em 0;
     width: 100%;
 }
 
@@ -183,7 +183,7 @@ section .container i {
     }
 
     section{
-        padding: 6em 2em 0 2em;
+        padding: 4em 2em 0 2em;
         width: 80%;
         margin: auto;
     }
