@@ -24,7 +24,7 @@ body {
 
 body {
   background: var(--body-background);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 14px;
 }
 
@@ -80,6 +80,8 @@ nav li + li {
 nav a {
   display: flex;
   align-items: center;
+  font-size: 1.3em;
+  font-weight: 300;
   padding: 0.5em 1em;
   transition: 0.4s;
 }
@@ -96,7 +98,7 @@ nav a:focus {
 }
 
 nav a i {
-  font-size: 1.5em;
+  font-size: 1.4em;
   margin-right: 0.2em;
 }
 
@@ -106,14 +108,14 @@ nav a span {
 
 /** Section **/
 section {
-  font-size: 1.18em;
+  font-size: 1.5em;
+  font-weight: 300;
   min-height: 100%;
   padding: 7em 2em 2em 2em;
   width: 100%;
 }
 
 section h2 {
-  font-size: 2em;
   text-align: center;
 }
 
@@ -138,7 +140,7 @@ section .container > * {
 
 section .container a {
   color: rgb(var(--primary-color));
-  font-weight: 500;
+  font-weight: 600;
 }
 
 section .container i {
