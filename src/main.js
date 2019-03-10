@@ -1,38 +1,38 @@
-import { relativePositionFrom } from "./user-interaction.js";
-import { createCircle, createPolygon, paralelogramPointsFrom, paralelogramCenter } from "./svg-shapes.js";
+import * as Svg from "./svg/index.js";
+import * as Paralelogram from "./geometry/paralelogram.js";
+import * as Triangle from './geometry/triangle.js';
+import * as Circle from './geometry/circle.js';
 
 let interactions = [];
 
-const svg = document.getElementById('canvas');
-svg.addEventListener('click', clickHandler);
+const canvas = document.getElementById('canvas');
+canvas.addEventListener('click', clickHandler);
 
 function clickHandler(event) {
-  const position = relativePositionFrom(event, svg);
+  const position = Svg.relativePositionFrom(canvas, event);
   interactions.push(position);
 
   if(interactions.length === 3) {
     const trianglePoints = interactions;
-    const paralelogramPoints = paralelogramPointsFrom(trianglePoints)
+    const paralelogramPoints = Paralelogram.fromTriangle(trianglePoints)
 
-    const polygon = createPolygon(paralelogramPoints);
-    svg.appendChild(polygon);
+    const polygon = Svg.polygon(paralelogramPoints);
+    canvas.appendChild(polygon);
 
-    const center = paralelogramCenter(paralelogramPoints);
+    const center = Paralelogram.center(paralelogramPoints);
+ 
+    const area = Triangle.area(trianglePoints);
+    const ratio = Circle.ratio(area);
 
-    const [a, b, c] =  trianglePoints;
-    const area = a.x * (b.y - c.y) + b.x * (c.y - a.y) + c.x * (a.y - b.y)
-    const ratio = Math.sqrt(Math.abs(area) / 3.14);
+    const paralelogramCircle = Svg.circle(center, ratio, '#FFC107');
 
-    const paralelogramCircle = createCircle(center.x, center.y, ratio, 'yellow');
-
-    svg.appendChild(paralelogramCircle);
+    canvas.appendChild(paralelogramCircle);
   }
 
   if(interactions.length > 3) {
     return;
   }
 
-  const circle = createCircle(position.x, position.y, 11, 'red');
-  svg.appendChild(circle);
-
+  const circle = Svg.circle(position, 11, '#D50000');
+  canvas.appendChild(circle);
 }
