@@ -1,4 +1,6 @@
 :root{
+    --body-color: #FAFAFA;
+    --primary-color: 248, 187, 208;
     --triangle-color: red;
 }
 
@@ -15,6 +17,79 @@ body,
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
+body{
+    background: var(--body-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+header{
+    background: black;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.2em 2em;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 3px 5px -1px rgba(0,0,0,.2),
+                0 6px 10px 0 rgba(0,0,0,.14),
+                0 1px 18px 0 rgba(0,0,0,.12);
+}
+
+.brand{
+    font-size: 2em;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style-type: none;
+}
+
+nav li{
+    margin-top: 1em;
+}
+
+nav li + li {
+    margin-left: 1em;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    padding: .5em 1em;
+    transition: .4s;
+}
+
+nav a:visited{
+    color: inherit;
+}
+
+.github:hover,
+.github:focus,
+nav a:hover,
+nav a:focus{
+    background: rgba(var(--primary-color), .2);
+    color:rgb(var(--primary-color));
+}
+
+nav a i{
+    font-size: 1.5em;
+    margin-right: .2em;
+}
+
+nav a span{
+    display: none;
+}
+
 .circle {
     stroke: var(--triangle-color);
     stroke-width: 1;
@@ -26,3 +101,17 @@ body,
     stroke-width: 1;
     fill: none;
 }
+
+@media only screen and (min-width: 600px) {
+    header{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    nav li{
+        margin-top: 0;
+    }
+
+    nav a span{
+        display: block;
+    }
+  }
