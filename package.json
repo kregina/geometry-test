@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "http-server src -o"
+    "start": "http-server src -c -1 -o"
   },
   "repository": {
     "type": "git",
