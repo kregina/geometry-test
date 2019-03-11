@@ -37,6 +37,12 @@ a {
   color: white;
 }
 
+.box-shadow {
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2),
+              0 2px 2px 0 rgba(0,0,0,.14),
+              0 1px 5px 0 rgba(0,0,0,.12);
+}
+
 /** Header **/
 header {
   background: var(--dark-color);
@@ -48,8 +54,6 @@ header {
   padding: 1.2em 2em;
   position: fixed;
   width: 100%;
-  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2),
-    0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
 }
 
 /** Header > brand **/
@@ -98,7 +102,6 @@ nav a:focus {
 }
 
 nav a i {
-  font-size: 1.4em;
   margin-right: 0.2em;
 }
 
@@ -147,8 +150,18 @@ section .container i {
   color: rgb(var(--primary-color));
 }
 
-.image-responsive {
-  width: 100%;
+figure {
+  margin: 0;
+  text-align: center;
+}
+
+figcaption{
+  font-size: 1.2em;
+}
+
+.image {
+  border-radius: 15em;
+  width: 45%;
 }
 
 #canvas {
@@ -159,9 +172,6 @@ section .container i {
 .canvas-container {
   background: white;
   padding: 1em;
-  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2),
-              0 2px 2px 0 rgba(0,0,0,.14),
-              0 1px 5px 0 rgba(0,0,0,.12);
 }
 
 .canvas-container p {
@@ -206,6 +216,13 @@ section .container i {
   stroke: #1A237E;
   stroke-width: 1;
   fill: none;
+}
+
+.footer{
+  background: rgb(var(--primary-color));
+  color: var(--dark-color);
+  text-align: center;
+  padding: 0.2em;
 }
 
 /** Desktop Settings **/
