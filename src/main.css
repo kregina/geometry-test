@@ -9,12 +9,16 @@
   --display-canvas-info: none;
 }
 
+.desktop-only {
+  display: none;
+}
+
 .mousemove{
   position: absolute;
   float: left;
 }
 
-.opacity { 
+.opacity {
   opacity: 0.5;
 }
 
@@ -235,7 +239,7 @@ figcaption{
 }
 
 /** Desktop Settings **/
-@media only screen and (min-width: 768px) {
+@media (min-width: 600px) {
   header {
     flex-direction: row;
     justify-content: space-between;
@@ -246,6 +250,10 @@ figcaption{
   }
 
   nav a span {
+    display: block;
+  }
+
+  .desktop-only {
     display: block;
   }
 

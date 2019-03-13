@@ -1,5 +1,5 @@
 # Geometry
-The goal of this assignement is to code a simple game that the user interacts and draws some geometrical shapes.
+The goal of this assignement is to code a simple game that the user interacts and draws some geometrical shapes with.
 
 ## Demo
 

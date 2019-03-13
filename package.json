@@ -1,7 +1,7 @@
 {
   "name": "geometry",
   "version": "1.0.0",
-  "description": "The goal of this assignement is to code a simple game that the user interacts and draws some geometrical shapes.",
+  "description": "The goal of this assignement is to code a simple game that the user interacts and draws some geometrical shapes with.",
   "scripts": {
     "start": "http-server src -c -1 -o"
   },
