@@ -9,6 +9,15 @@
   --display-canvas-info: none;
 }
 
+.mousemove{
+  position: absolute;
+  float: left;
+}
+
+.opacity { 
+  opacity: 0.5;
+}
+
 /** Global Settings **/
 html {
   scroll-behavior: smooth;

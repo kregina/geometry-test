@@ -108,7 +108,13 @@
         <span>Play</span>
       </h2>
       <div class="canvas-container box-shadow">
-        <svg id="canvas"></svg>
+        <svg id="canvas">
+          <circle id="mousemove" r="11" class="circle mousemove opacity"></circle>
+          <text id="coordinates-mousemove" class="text opacity">
+            <tspan id="x"></tspan>
+            <tspan id="y"></tspan>
+          </text>
+        </svg>
         <div id="canvas-info">
           <ul>
             <li id="area-paralelogram"></li>
