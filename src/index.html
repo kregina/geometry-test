@@ -97,23 +97,29 @@
               <pre>Enjoy!</pre>
           </p>
         </div>
+
       </div>
+      <a href="#play" class="target">
+        <span><i class="fas fa-gamepad"></i> Play</span>
+        <span><i class="fas fa-chevron-down"></i></span>
+      </a>
     </section>
 
     <section id="play">
-      <h2>
-        <i class="fas fa-gamepad"></i>
-        <span>Play</span>
-      </h2>
-      <div class="canvas-container box-shadow">
+      <div class="canvas-container box-shadow mask" id="masked">
+        <button class="button start" id="start" type="button">
+          <i class="fas fa-gamepad"></i> 
+          <span>Start</span>
+        </button>
         <svg id="canvas">
           <circle id="mousemove" r="11" class="circle mousemove opacity desktop-only"></circle>
           <text id="coordinates-mousemove" class="text opacity desktop-only">
             <tspan id="x"></tspan>
             <tspan id="y"></tspan>
           </text>
+          <g id="svg-group"></g>
         </svg>
-        <div id="canvas-info">
+        <div id="canvas-info" class="canvas-info">
           <ul>
             <li id="area-paralelogram"></li>
             <li id="area-circle"></li>
@@ -129,35 +135,39 @@
     <section id="about">
       <h2>
         <i class="fas fa-glasses"></i>
-        <span>About Kelly</span>
+        <span>About Me</span>
       </h2>
       <div class="container">
         <figure>
           <img src="./images/me.jpg" alt="Kelly Silva"
           title="Kelly Silva"
           class="image box-shadow"/>
-          <figcaption><i class="far fa-grimace"></i></figcaption>
+          <figcaption>
+            <i class="far fa-grimace"></i> 
+            <a href="http://linkedin.com/in/kregina" target="_blank" title="Linkedin Kelly Silva"><i class="fab fa-linkedin"></i></a>
+          </figcaption>
         </figure>
         <div>
             <p>Hi! I'm Kelly and I'm front-end developer!</p>
             <p>
-              I launched my career teaching Microsoft Office tools tools for an NGO for poor kids in the
-              São Paulo countryside. I worked as a teacher for 4 years landing my first job as a Developer in 2012.
-              In 2014 I was looking for discovering the world so I moved to the capital city,
+              I launched my career teaching Microsoft Office tools in an NGO 
+              for kids in São Paulo countryside. I worked as a teacher for 4 
+              years landing my first job as a Developer in 2012. In 2014 I was 
+              looking for discovering the world so I moved to the capital city, 
               for infinity and beyond <i class="fas fa-rocket"></i>.
             </p>
             <p>
-              Today I'm living in São Paulo - Brazil, working for a governmental company and my routine is
-              super challenging, but if it was not, it wouldn't be for me.
+              Today I'm living in São Paulo capital, working for a governmental company and my routine is super challenging, 
+              but if it was not, it wouldn't be for me.
             </p>
             <p>
               My hobbies are watching Anime (Japanese cartoons), play video games, travel, study,
-              music (Rock'n Roll), my friends, get tatoos, astronomy and drink beers (IPA).
+              listening to music (Rock'n Roll), my friends, get tatoos, astronomy and drink beers (IPA).
             </p>
             <p>
               My life goal is to see every place of the world that I have not seen yet.
             </p>
-            <p>II Hope you enjoy my assignment and have a great week.</p>
+            <p>I Hope you enjoy my assignment and have a great week.</p>
             <pre>Cheers!<i class="fas fa-beer"></i></pre>
         </div>
       </div>

@@ -7,6 +7,8 @@ let interactions = [];
 
 const canvas = document.getElementById('canvas');
 canvas.addEventListener('click', clickHandler);
+
+const svgGroup = document.getElementById('svg-group');
 const areaParalelogramDiv = document.getElementById('area-paralelogram');
 const areaCircleDiv = document.getElementById('area-circle');
 const canvasInfo = document.getElementById('canvas-info');
@@ -15,11 +17,22 @@ const circleMove = document.getElementById('mousemove');
 const circleMoveCoordinates = document.getElementById('coordinates-mousemove');
 const circleMoveCoordinateX = document.getElementById('x');
 const circleMoveCoordinateY = document.getElementById('y');
+const masked = document.getElementById('masked');
+const startButton = document.getElementById('start');
+
+startButton.onclick = _ => {
+  masked.classList.remove('mask');
+  startButton.style.display = 'none';
+  canvas.style.setProperty('--display', 'flex');
+}
 
 resetButton.onclick = _ => {
+  masked.classList.add('mask');
+  startButton.style.display = 'initial';
+  canvas.style.setProperty('--display', 'none');
+  canvasInfo.style.setProperty('--display', 'none');
   interactions = [];
-  canvas.innerHTML = '';
-  canvasInfo.style.setProperty('--display-canvas-info', 'none');
+  svgGroup.innerHTML = '';
 }
 
 document.addEventListener('mousemove', (event) => {
@@ -49,7 +62,7 @@ function clickHandler(event) {
     const paralelogramPoints = Paralelogram.fromTriangle(trianglePoints)
 
     const polygon = Svg.polygon(paralelogramPoints);
-    canvas.appendChild(polygon);
+    svgGroup.appendChild(polygon);
 
     const center = Paralelogram.center(paralelogramPoints);
 
@@ -61,9 +74,9 @@ function clickHandler(event) {
 
     areaParalelogramDiv.innerHTML = `Paralelogram Area: ${paralelogramArea.toFixed(2)}`;
     areaCircleDiv.innerHTML = `Yellow Circle Area: ${paralelogramArea.toFixed(2)}`;
-    canvasInfo.style.setProperty('--display-canvas-info', 'flex');
+    canvasInfo.style.setProperty('--display', 'flex');
 
-    canvas.appendChild(paralelogramCircle);
+    svgGroup.appendChild(paralelogramCircle);
   }
 
   if(interactions.length > 3) {
@@ -72,6 +85,6 @@ function clickHandler(event) {
 
   const circle = Svg.circle(position, 11, '#D50000');
   const coordinatesCircle = Svg.createText(position);
-  canvas.appendChild(circle);
-  canvas.appendChild(coordinatesCircle);
+  svgGroup.appendChild(circle);
+  svgGroup.appendChild(coordinatesCircle);
 }

@@ -6,20 +6,7 @@
   --circle-color: #D50000;
   --dark-color: black;
 
-  --display-canvas-info: none;
-}
-
-.desktop-only {
-  display: none;
-}
-
-.mousemove{
-  position: absolute;
-  float: left;
-}
-
-.opacity {
-  opacity: 0.5;
+  --display: none;
 }
 
 /** Global Settings **/
@@ -55,6 +42,49 @@ a {
               0 2px 2px 0 rgba(0,0,0,.14),
               0 1px 5px 0 rgba(0,0,0,.12);
 }
+.desktop-only {
+  display: none;
+}
+
+.mousemove{
+  position: absolute;
+  float: left;
+}
+
+.opacity {
+  opacity: 0.5;
+}
+
+.button{
+  background: var(--dark-color);
+  border: none;
+  border-radius: 0.5em;
+  color: white;
+  cursor: pointer;
+  font-size: 0.8em;
+  padding: 0.5em 1em;
+  transition: 0.4s;
+  outline: none;
+}
+
+.target{
+  color: rgb(var(--primary-color));
+  display: block;
+  font-size: 1.2em;
+  text-align: center;
+  margin-top: 2em;
+  animation: jump 0.5s infinite;
+  position: relative;
+  transition: 1s;
+}
+
+.target span {
+  display: block;
+}
+
+.target:hover{
+  color: var(--dark-color);
+}
 
 /** Header **/
 header {
@@ -67,6 +97,7 @@ header {
   padding: 1.2em 2em;
   position: fixed;
   width: 100%;
+  z-index: 220;
 }
 
 /** Header > brand **/
@@ -127,7 +158,7 @@ section {
   font-size: 1.5em;
   font-weight: 300;
   min-height: 100%;
-  padding: 7em 2em 2em 2em;
+  padding: 7em 1em 2em 1em;
   width: 100%;
 }
 
@@ -163,69 +194,81 @@ section .container i {
   color: rgb(var(--primary-color));
 }
 
-figure {
+section .container ul {
+  padding-left: 1em;
+}
+
+section .container figure {
   margin: 0;
   text-align: center;
 }
 
-figcaption{
+section .container figcaption{
   font-size: 1.2em;
 }
 
-.image {
+section .container .image {
   border-radius: 15em;
   width: 45%;
 }
 
-#canvas {
-  height: 32rem;
-  width: 100%;
-}
-
-.canvas-container {
+section .canvas-container {
   background: white;
   padding: 1em;
 }
 
-.canvas-container p {
+section .mask {
+  background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 32rem;
+}
+
+section .start {
+  font-size: 1em;
+  display: initial;
+}
+
+section .mask svg {
+  display: var(--display);
+}
+
+section .canvas-container svg{
+  width: 100%;
+  height: 32rem;
+}
+
+section .canvas-container p {
   margin: 0;
 }
 
-.canvas-container #canvas-info {
-  display: var(--display-canvas-info);
+section .canvas-container .canvas-info {
+  display: var(--display);
   justify-content: space-between;
   align-items: center;
 }
 
-.canvas-container ul {
+section .canvas-container ul {
   margin: 0;
 }
 
-.canvas-container .button{
-  background: var(--dark-color);
-  border: none;
-  border-radius: 0.5em;
-  color: white;
-  cursor: pointer;
-  padding: 0.8em 1em;
-  transition: 0.4s;
-}
-
-.canvas-container .button:hover{
+section .canvas-container .button:hover{
   color: rgb(var(--primary-color));
 }
 
-.text{
+section .canvas-container .text{
   fill: var(--dark-color);
 }
 
-.circle {
+section .canvas-container .circle {
   stroke: var(--circle-color);
   stroke-width: 1;
   fill: none;
 }
 
-.polygon {
+section .canvas-container .polygon {
   stroke: #1A237E;
   stroke-width: 1;
   fill: none;
@@ -266,8 +309,14 @@ figcaption{
   section .container {
     flex-wrap: initial;
   }
-
+  
   section .content + .content {
     margin-left: 2.5em;
   }
+}
+
+@keyframes jump { 
+  0% { top: 0; } 
+  50% { top: 30px; } 
+  100% { top: 0; } 
 }
