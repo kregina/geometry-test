@@ -32,6 +32,10 @@ body {
   box-sizing: border-box;
 }
 
+.overflow {
+  overflow: hidden;
+}
+
 a {
   text-decoration: none;
   color: white;
@@ -309,14 +313,8 @@ section .canvas-container .polygon {
   section .container {
     flex-wrap: initial;
   }
-  
+
   section .content + .content {
     margin-left: 2.5em;
   }
-}
-
-@keyframes jump { 
-  0% { top: 0; } 
-  50% { top: 30px; } 
-  100% { top: 0; } 
 }

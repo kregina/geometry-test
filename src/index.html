@@ -16,11 +16,25 @@
       integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="animation.css">
+    <link rel="stylesheet" href="loading.css">
     <link rel="stylesheet" href="main.css" />
     <script type="module" src="main.js"></script>
   </head>
 
-  <body>
+  <body id="body" class="overflow">
+    <div class="loading" id="loading">
+      <svg class="loading-svg" viewBox="0 50 612 626" xml:space="preserve">
+          <g>
+            <path class ="triangle" fill="#E91E63" d="M516.625,365.599c23.65,0,38.436-24.892,26.609-44.8L454.54,171.467c-11.826-19.907-41.393-19.907-53.218,0
+              l-88.694,149.332c-11.825,19.908,2.959,44.8,26.609,44.8H516.625L516.625,365.599z"/>
+            <circle class="cricle" fill="#E91E63" cx="186.965" cy="500.534" r="119.466"/>
+            <path class="square" fill="#E91E63" d="M532.463,425.869v149.332c0,16.49-13.375,29.865-29.864,29.865H353.267
+              c-16.492,0-29.867-13.375-29.867-29.865V425.869c0-16.492,13.375-29.867,29.867-29.867h149.332
+              C519.088,396.002,532.463,409.377,532.463,425.869z"/>
+          </g>
+      </svg>
+    </div>
     <header class="box-shadow">
       <div class="brand">
         <a href="#read-me">
@@ -108,7 +122,7 @@
     <section id="play">
       <div class="canvas-container box-shadow mask" id="masked">
         <button class="button start" id="start" type="button">
-          <i class="fas fa-gamepad"></i> 
+          <i class="fas fa-gamepad"></i>
           <span>Start</span>
         </button>
         <svg id="canvas">
@@ -143,21 +157,21 @@
           title="Kelly Silva"
           class="image box-shadow"/>
           <figcaption>
-            <i class="far fa-grimace"></i> 
+            <i class="far fa-grimace"></i>
             <a href="http://linkedin.com/in/kregina" target="_blank" title="Linkedin Kelly Silva"><i class="fab fa-linkedin"></i></a>
           </figcaption>
         </figure>
         <div>
             <p>Hi! I'm Kelly and I'm front-end developer!</p>
             <p>
-              I launched my career teaching Microsoft Office tools in an NGO 
-              for kids in São Paulo countryside. I worked as a teacher for 4 
-              years landing my first job as a Developer in 2012. In 2014 I was 
-              looking for discovering the world so I moved to the capital city, 
+              I launched my career teaching Microsoft Office tools in an NGO
+              for kids in São Paulo countryside. I worked as a teacher for 4
+              years landing my first job as a Developer in 2012. In 2014 I was
+              looking for discovering the world so I moved to the capital city,
               for infinity and beyond <i class="fas fa-rocket"></i>.
             </p>
             <p>
-              Today I'm living in São Paulo capital, working for a governmental company and my routine is super challenging, 
+              Today I'm living in São Paulo capital, working for a governmental company and my routine is super challenging,
               but if it was not, it wouldn't be for me.
             </p>
             <p>

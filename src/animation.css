@@ -1,0 +1,16 @@
+@keyframes updownR {
+    0%{
+        transform: translateY(0px);
+        animation-timing-function: cubic-bezier(0,.50,.50,1);
+    }
+    50%{
+        transform: translateY(-96px);
+        animation-timing-function: cubic-bezier(.50,0,1,.50) ;
+    }
+}
+
+@keyframes jump {
+    0% { top: 0; }
+    50% { top: 30px; }
+    100% { top: 0; }
+}

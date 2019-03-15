@@ -19,6 +19,13 @@ const circleMoveCoordinateX = document.getElementById('x');
 const circleMoveCoordinateY = document.getElementById('y');
 const masked = document.getElementById('masked');
 const startButton = document.getElementById('start');
+const loading = document.getElementById('loading');
+const body = document.getElementById('body')
+
+setTimeout(_ => {
+  body.classList.remove('overflow');
+  loading.style.display = 'none';
+}, 3000);
 
 startButton.onclick = _ => {
   masked.classList.remove('mask');
