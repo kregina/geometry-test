@@ -16,14 +16,15 @@
       integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="css-variables.css">
     <link rel="stylesheet" href="animation.css">
     <link rel="stylesheet" href="loading.css">
     <link rel="stylesheet" href="main.css" />
     <script type="module" src="main.js"></script>
   </head>
 
-  <body id="body" class="overflow">
-    <div class="loading" id="loading">
+  <body id="body" class="preload">
+    <div class="loading desktop-only" id="loading">
       <svg class="loading-svg" viewBox="0 50 612 626" xml:space="preserve">
           <g>
             <path class ="triangle" fill="#E91E63" d="M516.625,365.599c23.65,0,38.436-24.892,26.609-44.8L454.54,171.467c-11.826-19.907-41.393-19.907-53.218,0
@@ -35,7 +36,8 @@
           </g>
       </svg>
     </div>
-    <header class="box-shadow">
+
+    <header>
       <div class="brand">
         <a href="#read-me">
           <i class="fas fa-shapes"></i>
@@ -70,7 +72,11 @@
       </nav>
     </header>
 
-    <section id="read-me">
+    <section id="banner" class="banner desktop-only">
+      <h1 class="banner-text"><i class="far fa-heart"></i> Front-end development </h1>
+    </section>
+
+    <section id="read-me" class="background">
       <h2>
         <i class="fas fa-cog"></i>
         <span>Readme</span>
@@ -91,7 +97,7 @@
             </li>
             <li>CSS variables. <i class="fab fa-css3-alt"></i></li>
             <li>
-              Harnessing the power of the latest JavaScript and CSS feature without the need for pre-processors on modern browsers.  <i class="fas fa-trophy"></i>
+              Harnessing the power of the latest JavaScript and CSS feature without the need pre-processors on modern browsers.  <i class="fas fa-trophy"></i>
             </li>
             <li>
               The only development dependency is
@@ -122,8 +128,7 @@
     <section id="play">
       <div class="canvas-container box-shadow mask" id="masked">
         <button class="button start" id="start" type="button">
-          <i class="fas fa-gamepad"></i>
-          <span>Start</span>
+            <i class="fas fa-play"></i>
         </button>
         <svg id="canvas">
           <circle id="mousemove" r="11" class="circle mousemove opacity desktop-only"></circle>
@@ -146,7 +151,7 @@
       </div>
     </section>
 
-    <section id="about">
+    <section id="about" class="background">
       <h2>
         <i class="fas fa-glasses"></i>
         <span>About Me</span>
@@ -186,6 +191,7 @@
         </div>
       </div>
     </section>
+
     <footer class="footer">
       <p>
         <small>Created by myself for

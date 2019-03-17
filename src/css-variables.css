@@ -1,0 +1,10 @@
+/** CSS Variables **/
+:root {
+    --light-color: white;
+    --dark-color: black;
+    --gray-100: #F5F5F5;
+    --primary-color: 233, 30, 99;
+    --circle-color: #D50000;
+
+    --display: none;
+}

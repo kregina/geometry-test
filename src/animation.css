@@ -14,3 +14,13 @@
     50% { top: 30px; }
     100% { top: 0; }
 }
+
+@keyframes typewriter{
+    from{width: 0;}
+    to{width: 11.5em;}
+}
+
+@keyframes blinkTextCursor{
+    from{border-right-color: rgba(var(--primary-color),.75);}
+    to{border-right-color: transparent;}
+}

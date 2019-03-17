@@ -18,24 +18,21 @@ const circleMoveCoordinates = document.getElementById('coordinates-mousemove');
 const circleMoveCoordinateX = document.getElementById('x');
 const circleMoveCoordinateY = document.getElementById('y');
 const masked = document.getElementById('masked');
-const startButton = document.getElementById('start');
+const startGameButton = document.getElementById('start');
 const loading = document.getElementById('loading');
 const body = document.getElementById('body')
 
-setTimeout(_ => {
-  body.classList.remove('overflow');
-  loading.style.display = 'none';
-}, 3000);
+window.onload = _ => setTimeout(showPage, 2500);
 
-startButton.onclick = _ => {
+startGameButton.onclick = _ => {
   masked.classList.remove('mask');
-  startButton.style.display = 'none';
+  startGameButton.style.display = 'none';
   canvas.style.setProperty('--display', 'flex');
 }
 
 resetButton.onclick = _ => {
   masked.classList.add('mask');
-  startButton.style.display = 'initial';
+  startGameButton.style.display = 'initial';
   canvas.style.setProperty('--display', 'none');
   canvasInfo.style.setProperty('--display', 'none');
   interactions = [];
@@ -59,6 +56,11 @@ document.addEventListener('mousemove', (event) => {
   circleMoveCoordinateY.setAttributeNS(null, 'y', y - 20);
   circleMoveCoordinateY.innerHTML = `y: ${y.toFixed(2)}`;
 });
+
+function showPage() {
+  body.classList.remove('preload');
+  loading.style.display = 'none';
+}
 
 function clickHandler(event) {
   const position = Svg.relativePositionFrom(canvas, event);

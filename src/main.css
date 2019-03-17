@@ -1,14 +1,3 @@
-/** CSS Variables **/
-:root {
-  --body-background: #e9e9e9;
-  --section-background: white;
-  --primary-color: 233, 30, 99;
-  --circle-color: #D50000;
-  --dark-color: black;
-
-  --display: none;
-}
-
 /** Global Settings **/
 html {
   scroll-behavior: smooth;
@@ -23,7 +12,6 @@ body {
 }
 
 body {
-  background: var(--body-background);
   font-family: 'Josefin Sans', sans-serif;
   font-size: 14px;
 }
@@ -32,13 +20,9 @@ body {
   box-sizing: border-box;
 }
 
-.overflow {
-  overflow: hidden;
-}
-
 a {
   text-decoration: none;
-  color: white;
+  color: var(--light-color);
 }
 
 .box-shadow {
@@ -46,6 +30,7 @@ a {
               0 2px 2px 0 rgba(0,0,0,.14),
               0 1px 5px 0 rgba(0,0,0,.12);
 }
+
 .desktop-only {
   display: none;
 }
@@ -63,7 +48,7 @@ a {
   background: var(--dark-color);
   border: none;
   border-radius: 0.5em;
-  color: white;
+  color: var(--light-color);
   cursor: pointer;
   font-size: 0.8em;
   padding: 0.5em 1em;
@@ -77,7 +62,7 @@ a {
   font-size: 1.2em;
   text-align: center;
   margin-top: 2em;
-  animation: jump 0.5s infinite;
+  animation: jump 1s infinite;
   position: relative;
   transition: 1s;
 }
@@ -93,7 +78,7 @@ a {
 /** Header **/
 header {
   background: var(--dark-color);
-  color: white;
+  color: var(--light-color);
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -157,6 +142,30 @@ nav a span {
   display: none;
 }
 
+.banner{
+  align-items: center;
+}
+
+.banner-text{
+  border-right: 2px solid rgba(var(--primary-color),.75);
+  font-weight: 300;
+  font-size: 3em;
+  text-align: center;
+  white-space: nowrap;
+  word-wrap: break-word;
+  overflow: hidden;
+  transform: translateY(-50%);
+  width: 11.5em;
+  margin: 0 auto;
+  position: relative;
+  animation: typewriter 3s steps(24) 3s 1 normal both,
+             blinkTextCursor 500ms steps(24) infinite normal;
+}
+
+.banner-text i {
+  color: rgb(var(--primary-color));
+}
+
 /** Section **/
 section {
   font-size: 1.5em;
@@ -166,7 +175,12 @@ section {
   width: 100%;
 }
 
-section h2 {
+section.background {
+  background: var(--gray-100);
+}
+
+section h2,
+section h4 {
   text-align: center;
 }
 
@@ -189,13 +203,10 @@ section .container > * {
   flex: 1 100%;
 }
 
-section .container a {
-  color: rgb(var(--primary-color));
-  font-weight: 600;
-}
-
+section .container a,
 section .container i {
   color: rgb(var(--primary-color));
+  font-weight: 600;
 }
 
 section .container ul {
@@ -217,17 +228,16 @@ section .container .image {
 }
 
 section .canvas-container {
-  background: white;
   padding: 1em;
 }
 
 section .mask {
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 32rem;
+  height: 36rem;
 }
 
 section .start {
@@ -241,7 +251,7 @@ section .mask svg {
 
 section .canvas-container svg{
   width: 100%;
-  height: 32rem;
+  height: 36rem;
 }
 
 section .canvas-container p {
@@ -301,16 +311,16 @@ section .canvas-container .polygon {
   }
 
   .desktop-only {
-    display: block;
+    display: flex;
   }
 
   section {
     padding: 4em 2em 0 2em;
-    width: 80%;
-    margin: auto;
   }
 
   section .container {
+    width: 80%;
+    margin: auto;
     flex-wrap: initial;
   }
 

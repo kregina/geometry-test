@@ -1,3 +1,12 @@
+.preload {
+    overflow: hidden;
+}
+
+.preload * {
+    transition: none !important;
+}
+
+
 .loading {
     color: white;
     display: flex;
