@@ -22,7 +22,20 @@ const startGameButton = document.getElementById('start');
 const loading = document.getElementById('loading');
 const body = document.getElementById('body')
 
-window.onload = _ => setTimeout(showPage, 2500);
+// window.onload = _ => setTimeout(showPage, 2500);
+
+// const menu = document.querySelector('.navigation');
+// const header = document.querySelector('.header');
+
+// const observer = new IntersectionObserver((entries, observer) => {
+//   if (entries[0].isIntersecting) {
+//     menu.classList.remove('title-visible');
+//   } else {
+//     menu.classList.add('title-visible');
+//   }
+// });
+
+// observer.observe(header);
 
 startGameButton.onclick = _ => {
   masked.classList.remove('mask');

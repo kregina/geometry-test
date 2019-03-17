@@ -22,20 +22,20 @@ body {
 
 a {
   text-decoration: none;
-  color: var(--light-color);
+  color: var(--light);
 }
 
 .box-shadow {
-  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2),
-              0 2px 2px 0 rgba(0,0,0,.14),
-              0 1px 5px 0 rgba(0,0,0,.12);
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+              0 2px 2px 0 rgba(0, 0, 0, 0.14),
+              0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
 .desktop-only {
   display: none;
 }
 
-.mousemove{
+.mousemove {
   position: absolute;
   float: left;
 }
@@ -44,11 +44,11 @@ a {
   opacity: 0.5;
 }
 
-.button{
-  background: var(--dark-color);
+.button {
+  background: var(--dark);
   border: none;
   border-radius: 0.5em;
-  color: var(--light-color);
+  color: var(--light);
   cursor: pointer;
   font-size: 0.8em;
   padding: 0.5em 1em;
@@ -56,8 +56,8 @@ a {
   outline: none;
 }
 
-.target{
-  color: rgb(var(--primary-color));
+.target {
+  color: rgb(var(--primary));
   display: block;
   font-size: 1.2em;
   text-align: center;
@@ -71,99 +71,101 @@ a {
   display: block;
 }
 
-.target:hover{
-  color: var(--dark-color);
+.target:hover {
+  color: var(--dark);
 }
 
 /** Header **/
 header {
-  background: var(--dark-color);
-  color: var(--light-color);
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
+  background: var(--primary);
+  display: grid;
+  height: 100%;
   padding: 1.2em 2em;
-  position: fixed;
   width: 100%;
-  z-index: 220;
 }
 
-/** Header > brand **/
-.brand {
-  font-size: 2em;
-}
-
-.brand i {
-  color: rgb(var(--primary-color));
-}
-
-/** Header > nav**/
-nav {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  list-style-type: none;
-}
-
-nav li {
-  margin-top: 1em;
-}
-
-nav li + li {
-  margin-left: 1em;
-}
-
-nav a {
+/** Header > banner **/
+header .banner {
   display: flex;
   align-items: center;
-  font-size: 1.3em;
-  font-weight: 300;
-  padding: 0.5em 1em;
-  transition: 0.4s;
+  justify-content: center;
 }
 
-nav a:visited {
-  color: inherit;
-}
-
-.github:hover,
-.github:focus,
-nav a:hover,
-nav a:focus {
-  color: rgb(var(--primary-color));
-}
-
-nav a i {
-  margin-right: 0.2em;
-}
-
-nav a span {
-  display: none;
-}
-
-.banner{
-  align-items: center;
-}
-
-.banner-text{
-  border-right: 2px solid rgba(var(--primary-color),.75);
+header .banner-text {
+  align-self: flex-end;
+  border-right: 2px solid rgba(var(--light-rgb), 0.75);
+  color: var(--light);
   font-weight: 300;
   font-size: 3em;
-  text-align: center;
   white-space: nowrap;
   word-wrap: break-word;
   overflow: hidden;
   transform: translateY(-50%);
-  width: 11.5em;
-  margin: 0 auto;
+  width: 18.5em;
   position: relative;
-  animation: typewriter 3s steps(24) 3s 1 normal both,
-             blinkTextCursor 500ms steps(24) infinite normal;
+  animation: typewriter 3s steps(24) 3s 1 normal both, blinkTextCursor 500ms steps(24) infinite normal;
 }
 
-.banner-text i {
-  color: rgb(var(--primary-color));
+header .banner-text i {
+  color: var(--light);
+}
+
+/** Header > nav **/
+header nav {
+  align-self: flex-end;
+  background: var(--primary);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  transition: all 0.2s;
+}
+
+header nav .brand {
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+}
+
+header .brand i {
+  color: var(--yellow);
+}
+
+header .brand a:hover {
+  color: var(--light);
+}
+
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+  list-style-type: none;
+}
+
+header nav li + li {
+  margin-left: 2em;
+}
+
+header li a {
+  color: var(--light);
+  display: flex;
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
+header a i {
+  margin-right: 0.5em;
+}
+
+header a span {
+  display: none;
+}
+
+.github:hover,
+.github:focus,
+header nav a:hover,
+header nav a:focus {
+  color: var(--yellow);
 }
 
 /** Section **/
@@ -185,8 +187,8 @@ section h4 {
 }
 
 section h2::after {
-  background: rgb(var(--primary-color));
-  content: "";
+  background: var(--primary);
+  content: '';
   display: block;
   height: 0.2em;
   margin: 0.3em auto;
@@ -205,7 +207,7 @@ section .container > * {
 
 section .container a,
 section .container i {
-  color: rgb(var(--primary-color));
+  color: var(--primary);
   font-weight: 600;
 }
 
@@ -218,7 +220,7 @@ section .container figure {
   text-align: center;
 }
 
-section .container figcaption{
+section .container figcaption {
   font-size: 1.2em;
 }
 
@@ -249,7 +251,7 @@ section .mask svg {
   display: var(--display);
 }
 
-section .canvas-container svg{
+section .canvas-container svg {
   width: 100%;
   height: 36rem;
 }
@@ -268,46 +270,38 @@ section .canvas-container ul {
   margin: 0;
 }
 
-section .canvas-container .button:hover{
-  color: rgb(var(--primary-color));
+section .canvas-container .button:hover {
+  color: var(--primary);
 }
 
-section .canvas-container .text{
-  fill: var(--dark-color);
+section .canvas-container .text {
+  fill: var(--dark);
 }
 
 section .canvas-container .circle {
-  stroke: var(--circle-color);
+  stroke: var(--circle);
   stroke-width: 1;
   fill: none;
 }
 
 section .canvas-container .polygon {
-  stroke: #1A237E;
+  stroke: #1a237e;
   stroke-width: 1;
   fill: none;
 }
 
-.footer{
-  background: rgb(var(--primary-color));
-  color: var(--dark-color);
+.footer {
+  background: var(--yellow);
+  color: var(--dark);
   text-align: center;
   padding: 0.2em;
 }
 
 /** Desktop Settings **/
 @media (min-width: 600px) {
-  header {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  nav li {
-    margin-top: 0;
-  }
-
-  nav a span {
+  header nav a span {
     display: block;
+    transition: 0.4s;
   }
 
   .desktop-only {

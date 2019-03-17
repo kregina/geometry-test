@@ -1,26 +1,40 @@
 @keyframes updownR {
-    0%{
-        transform: translateY(0px);
-        animation-timing-function: cubic-bezier(0,.50,.50,1);
-    }
-    50%{
-        transform: translateY(-96px);
-        animation-timing-function: cubic-bezier(.50,0,1,.50) ;
-    }
+  0% {
+    transform: translateY(0px);
+    animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+  }
+  50% {
+    transform: translateY(-96px);
+    animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+  }
 }
 
 @keyframes jump {
-    0% { top: 0; }
-    50% { top: 30px; }
-    100% { top: 0; }
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 30px;
+  }
+  100% {
+    top: 0;
+  }
 }
 
-@keyframes typewriter{
-    from{width: 0;}
-    to{width: 11.5em;}
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 18.5em;
+  }
 }
 
-@keyframes blinkTextCursor{
-    from{border-right-color: rgba(var(--primary-color),.75);}
-    to{border-right-color: transparent;}
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(var(--light-rgb), 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
 }

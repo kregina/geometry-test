@@ -1,10 +1,23 @@
 /** CSS Variables **/
 :root {
-    --light-color: white;
-    --dark-color: black;
-    --gray-100: #F5F5F5;
-    --primary-color: 233, 30, 99;
-    --circle-color: #D50000;
+  --pink: #E91E63;
+  --yellow: #F9DC5C;
+  --green: #8BC34A;
+  --light: #F4FFFD;
+  --dark: #011936;
 
-    --display: none;
+  --pink-rgb: 233,30,99;
+  --yello-rgb: 249, 220, 92;
+  --green-rgb: 139, 195, 74;
+  --light-rgb: 244, 255, 253;
+  --dark-rgb: 1, 25, 54;
+
+  --primary: var(--pink);
+  --primary-rgb: var(--pink-rgb);
+
+  --secondary: var(--yellow);
+  --secondary-rgb: var(--yellow-rgb);
+
+  --circle: #d50000;
+  --display: none;
 }
