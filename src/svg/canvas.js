@@ -1,8 +1,14 @@
-export const relativePositionFrom = (svg, evt) => {
-  const CTM = svg.getScreenCTM();
-  if (evt.touches) { evt = evt.touches[0]; }
+/**
+ * @param {SVGSVGElement} svg
+ * @param {MouseEvent} event
+ */
+export const relativePositionFrom = (svg, event) => {
+  const e = event;
+  const point = new DOMPoint(e.clientX, e.clientY);
+  const relativePoint = point.matrixTransform(svg.getScreenCTM().inverse())
+
   return [
-    (evt.clientX - CTM.e) / CTM.a,
-    (evt.clientY - CTM.f) / CTM.d
+    relativePoint.x,
+    relativePoint.y
   ];
 }

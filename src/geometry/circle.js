@@ -1,1 +1,1 @@
-export const ratio = (area) => Math.sqrt(Math.abs(area) / Math.PI);
+export const ratio = (area) => Math.sqrt(area / Math.PI);
