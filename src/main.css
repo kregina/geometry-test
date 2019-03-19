@@ -222,6 +222,8 @@ section .canvas-container {
   padding: 1em;
 }
 
+
+
 section .mask {
   background: rgba(0, 0, 0, 0.1);
   display: flex;
@@ -243,6 +245,19 @@ section .mask svg {
 section .canvas-container svg {
   width: 100%;
   height: 36rem;
+}
+
+svg#canvas {
+  user-select: none;
+  cursor:pointer;
+}
+
+svg#canvas .draggable:hover {
+  cursor: grab;
+}
+
+svg#canvas .draggable:active {
+  cursor: grabbing;
 }
 
 section .canvas-container p {
@@ -270,7 +285,6 @@ section .canvas-container .text {
 section .canvas-container .circle {
   stroke: var(--circle);
   stroke-width: 1;
-  fill: none;
 }
 
 section .canvas-container .polygon {
