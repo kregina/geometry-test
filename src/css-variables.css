@@ -1,8 +1,7 @@
 /** CSS Variables **/
 :root {
   --pink: #E91E63;
-  --yellow: #F9DC5C;
-  --green: #8BC34A;
+  --accent: #F9DC5C;
   --light: #F4FFFD;
   --dark: #011936;
 
@@ -15,9 +14,11 @@
   --primary: var(--pink);
   --primary-rgb: var(--pink-rgb);
 
-  --secondary: var(--yellow);
+  --secondary: var(--accent);
   --secondary-rgb: var(--yellow-rgb);
 
   --circle: #d50000;
   --display: none;
+
+  --intro-animation-size: 18.5em;
 }

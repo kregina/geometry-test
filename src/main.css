@@ -1,4 +1,4 @@
-/** Global Settings **/
+/** Global Styles **/
 html {
   scroll-behavior: smooth;
 }
@@ -9,11 +9,11 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  font-weight: 300;
 }
 
 body {
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 14px;
 }
 
 * {
@@ -22,7 +22,6 @@ body {
 
 a {
   text-decoration: none;
-  color: var(--light);
 }
 
 .box-shadow {
@@ -56,8 +55,104 @@ a {
   outline: none;
 }
 
-.target {
-  color: rgb(var(--primary));
+/** Intro **/
+.intro {
+  background: var(--primary);
+  display: flex;
+  height: calc(100vh - 6em);
+}
+
+.intro-text {
+  align-self: center;
+  border-right: 2px solid rgba(var(--light-rgb), 0.75);
+  color: var(--light);
+  font-weight: 300;
+  margin: 0 auto;
+  white-space: nowrap;
+  word-wrap: break-word;
+  overflow: hidden;
+  transform: translateY(-50%);
+  width: var(--intro-animation-size);
+  position: relative;
+  animation: typewriter 3s steps(44) 3s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+.intro-text i {
+  color: var(--light);
+}
+
+/** header **/
+.header{
+  position: sticky;
+  top: 0;
+  padding: 0;
+  z-index: 1;
+  transition: all 300ms;
+  box-decoration-break: clone;
+}
+
+/** navigation **/
+.navigation {
+  background: var(--primary);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 1em;
+  width: 100%;
+}
+
+.navigation .brand {
+  padding-top: 1em;
+}
+
+.navigation .brand a {
+  color: var(--light);
+  font-size: 1.8em;
+  font-weight: 500;
+}
+
+.navigation .brand i {
+  color: var(--accent);
+  margin-right: 0.5em;
+}
+
+.navigation ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  padding: 0;
+}
+
+.navigation li + li {
+  margin-left: 1.8em;
+}
+
+.navigation li a {
+  color: var(--light);
+  font-size: 1.3em;
+  font-weight: 300;
+  transition: all 0.5s;
+}
+
+.navigation li a:hover {
+  color: var(--accent);
+}
+
+.navigation a span{
+  display: none;
+}
+
+/** Section **/
+section {
+  font-size: 1.3em;
+  min-height: 100%;
+  padding: 3em 1em 2em 1em;
+  width: 100%;
+}
+
+section .target {
+  color: var(--primary);
   display: block;
   font-size: 1.2em;
   text-align: center;
@@ -67,118 +162,12 @@ a {
   transition: 1s;
 }
 
-.target span {
+section .target span {
   display: block;
 }
 
-.target:hover {
+section .target:hover {
   color: var(--dark);
-}
-
-/** Header **/
-header {
-  background: var(--primary);
-  display: grid;
-  height: 100%;
-  padding: 1.2em 2em;
-  width: 100%;
-}
-
-/** Header > banner **/
-header .banner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-header .banner-text {
-  align-self: flex-end;
-  border-right: 2px solid rgba(var(--light-rgb), 0.75);
-  color: var(--light);
-  font-weight: 300;
-  font-size: 3em;
-  white-space: nowrap;
-  word-wrap: break-word;
-  overflow: hidden;
-  transform: translateY(-50%);
-  width: 18.5em;
-  position: relative;
-  animation: typewriter 3s steps(24) 3s 1 normal both, blinkTextCursor 500ms steps(24) infinite normal;
-}
-
-header .banner-text i {
-  color: var(--light);
-}
-
-/** Header > nav **/
-header nav {
-  align-self: flex-end;
-  background: var(--primary);
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  transition: all 0.2s;
-}
-
-header nav .brand {
-  font-size: 2em;
-  display: flex;
-  align-items: center;
-}
-
-header .brand i {
-  color: var(--yellow);
-}
-
-header .brand a:hover {
-  color: var(--light);
-}
-
-header nav ul {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0;
-  list-style-type: none;
-}
-
-header nav li + li {
-  margin-left: 2em;
-}
-
-header li a {
-  color: var(--light);
-  display: flex;
-  font-size: 1.5em;
-  font-weight: 300;
-}
-
-header a i {
-  margin-right: 0.5em;
-}
-
-header a span {
-  display: none;
-}
-
-.github:hover,
-.github:focus,
-header nav a:hover,
-header nav a:focus {
-  color: var(--yellow);
-}
-
-/** Section **/
-section {
-  font-size: 1.5em;
-  font-weight: 300;
-  min-height: 100%;
-  padding: 7em 1em 2em 1em;
-  width: 100%;
-}
-
-section.background {
-  background: var(--gray-100);
 }
 
 section h2,
@@ -290,18 +279,48 @@ section .canvas-container .polygon {
   fill: none;
 }
 
+section#about pre i {
+  color: var(--accent);
+}
+
 .footer {
-  background: var(--yellow);
-  color: var(--dark);
+  background: var(--primary);
+  color: var(--light);
   text-align: center;
   padding: 0.2em;
 }
 
 /** Desktop Settings **/
 @media (min-width: 600px) {
-  header nav a span {
+  .intro {
+    height: calc(100vh - 4em);
+  }
+
+  .navigation {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navigation .brand {
+    margin-bottom: 1em;
+  }
+
+  .navigation ul {
+    margin: 0;
+  }
+
+  .navigation li a {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .navigation li i {
+    margin-right: 0.5em;
+  }
+
+  .navigation li span {
     display: block;
-    transition: 0.4s;
   }
 
   .desktop-only {

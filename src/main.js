@@ -24,18 +24,20 @@ const body = document.getElementById('body')
 
 // window.onload = _ => setTimeout(showPage, 2500);
 
-// const menu = document.querySelector('.navigation');
-// const header = document.querySelector('.header');
+const headerEl = document.querySelector('.header')
+const introElement = document.querySelector('.intro')
 
-// const observer = new IntersectionObserver((entries, observer) => {
-//   if (entries[0].isIntersecting) {
-//     menu.classList.remove('title-visible');
-//   } else {
-//     menu.classList.add('title-visible');
-//   }
-// });
+const handler = (entries) => {
+  if (!entries[0].isIntersecting) {
+    headerEl.classList.add('sticked')
+  } else {
+    headerEl.classList.remove('sticked')
+  }
+}
 
-// observer.observe(header);
+// create the observer
+const observer = new window.IntersectionObserver(handler);
+observer.observe(introElement)
 
 startGameButton.onclick = _ => {
   masked.classList.remove('mask');
