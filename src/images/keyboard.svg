@@ -1,0 +1,72 @@
+<svg width="41" height="24" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="26" width="43" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <path id="svg_2" opacity="0.2" fill="#231F20" d="m40.420881,21.535076c0,1.148 -0.895,2.079 -2,2.079l-36,0c-1.105,0 -2,-0.931 -2,-2.079l0,-16.842c0,-1.148 0.895,-2.079 2,-2.079l36,0c1.105,0 2,0.931 2,2.079l0,16.842z"/>
+  <path id="svg_3" fill="#F5CF87" d="m40.420881,19.535076c0,1.148 -0.895,2.079 -2,2.079l-36,0c-1.105,0 -2,-0.931 -2,-2.079l0,-16.842c0,-1.148 0.895,-2.079 2,-2.079l36,0c1.105,0 2,0.931 2,2.079l0,16.842z"/>
+  <path opacity="0.2" id="svg_5" fill="#231F20" d="m28.305881,16.614076l-15.77,0c-0.892,0 -1.615,0.672 -1.615,1.5s0.723,1.5 1.615,1.5l15.771,0c0.892,0 1.615,-0.672 1.615,-1.5s-0.724,-1.5 -1.616,-1.5z"/>
+  <circle opacity="0.2" id="svg_6" r="1.5" fill="#231F20" cy="18.114076" cx="8.420881"/>
+  <circle opacity="0.2" id="svg_7" r="1.5" fill="#231F20" cy="18.114076" cx="4.420881"/>
+  <circle opacity="0.2" id="svg_8" r="1.5" fill="#231F20" cy="18.114076" cx="36.420881"/>
+  <circle opacity="0.2" id="svg_9" r="1.5" fill="#231F20" cy="18.114076" cx="32.420881"/>
+  <path opacity="0.2" id="svg_10" fill="#231F20" d="m8.420881,12.464076l-4,0c-0.828,0 -1.5,0.672 -1.5,1.5c0,0.828 0.672,1.5 1.5,1.5l4,0c0.828,0 1.5,-0.672 1.5,-1.5c0,-0.829 -0.672,-1.5 -1.5,-1.5z"/>
+  <path opacity="0.2" id="svg_11" fill="#231F20" d="m36.420881,12.464076l-4,0c-0.828,0 -1.5,0.672 -1.5,1.5c0,0.828 0.672,1.5 1.5,1.5l4,0c0.828,0 1.5,-0.672 1.5,-1.5c0,-0.829 -0.672,-1.5 -1.5,-1.5z"/>
+  <circle opacity="0.2" id="svg_12" r="1.5" fill="#231F20" cy="10.114076" cx="8.420881"/>
+  <circle opacity="0.2" id="svg_13" r="1.5" fill="#231F20" cy="10.114076" cx="4.420881"/>
+  <circle opacity="0.2" id="svg_14" r="1.5" fill="#231F20" cy="10.114076" cx="36.420881"/>
+  <circle opacity="0.2" id="svg_15" r="1.5" fill="#231F20" cy="10.114076" cx="32.420881"/>
+  <circle opacity="0.2" id="svg_16" r="1.5" fill="#231F20" cy="6.130076" cx="8.420881"/>
+  <circle opacity="0.2" id="svg_17" r="1.5" fill="#231F20" cy="6.130076" cx="4.420881"/>
+  <circle opacity="0.2" id="svg_18" r="1.5" fill="#231F20" cy="13.964076" cx="16.420881"/>
+  <circle opacity="0.2" id="svg_19" r="1.5" fill="#231F20" cy="13.964076" cx="12.420881"/>
+  <circle opacity="0.2" id="svg_20" r="1.5" fill="#231F20" cy="10.114076" cx="16.420881"/>
+  <circle opacity="0.2" id="svg_21" r="1.5" fill="#231F20" cy="10.114076" cx="12.420881"/>
+  <circle opacity="0.2" id="svg_22" r="1.5" fill="#231F20" cy="6.130076" cx="16.420881"/>
+  <circle opacity="0.2" id="svg_23" r="1.5" fill="#231F20" cy="6.130076" cx="12.420881"/>
+  <circle opacity="0.2" id="svg_24" r="1.5" fill="#231F20" cy="13.964076" cx="24.420881"/>
+  <circle opacity="0.2" id="svg_25" r="1.5" fill="#231F20" cy="13.964076" cx="20.420881"/>
+  <circle opacity="0.2" id="svg_26" r="1.5" fill="#231F20" cy="10.114076" cx="24.420881"/>
+  <circle opacity="0.2" id="svg_27" r="1.5" fill="#231F20" cy="10.114076" cx="20.420881"/>
+  <circle opacity="0.2" id="svg_28" r="1.5" fill="#231F20" cy="6.130076" cx="24.420881"/>
+  <circle opacity="0.2" id="svg_29" r="1.5" fill="#231F20" cy="13.964076" cx="28.420881"/>
+  <circle opacity="0.2" id="svg_30" r="1.5" fill="#231F20" cy="10.114076" cx="28.420881"/>
+  <circle opacity="0.2" id="svg_31" r="1.5" fill="#231F20" cy="6.130076" cx="28.420881"/>
+  <circle opacity="0.2" id="svg_32" r="1.5" fill="#231F20" cy="6.130076" cx="20.420881"/>
+  <circle opacity="0.2" id="svg_33" r="1.5" fill="#231F20" cy="6.130076" cx="36.420881"/>
+  <circle opacity="0.2" id="svg_34" r="1.5" fill="#231F20" cy="6.130076" cx="32.420881"/>
+  <path id="svg_36" fill="#FFFFFF" d="m28.305881,15.614076l-15.77,0c-0.892,0 -1.615,0.672 -1.615,1.5s0.723,1.5 1.615,1.5l15.771,0c0.892,0 1.615,-0.672 1.615,-1.5s-0.724,-1.5 -1.616,-1.5z"/>
+  <circle id="svg_37" r="1.5" fill="#FFFFFF" cy="17.114076" cx="8.420881"/>
+  <circle id="svg_38" r="1.5" fill="#FFFFFF" cy="17.114076" cx="4.420881"/>
+  <circle id="svg_39" r="1.5" fill="#FFFFFF" cy="17.114076" cx="36.420881"/>
+  <circle id="svg_40" r="1.5" fill="#FFFFFF" cy="17.114076" cx="32.420881"/>
+  <path id="svg_41" fill="#FFFFFF" d="m8.420881,11.464076l-4,0c-0.828,0 -1.5,0.672 -1.5,1.5c0,0.828 0.672,1.5 1.5,1.5l4,0c0.828,0 1.5,-0.672 1.5,-1.5c0,-0.829 -0.672,-1.5 -1.5,-1.5z"/>
+  <path id="svg_42" fill="#FFFFFF" d="m36.420881,11.464076l-4,0c-0.828,0 -1.5,0.672 -1.5,1.5c0,0.828 0.672,1.5 1.5,1.5l4,0c0.828,0 1.5,-0.672 1.5,-1.5c0,-0.829 -0.672,-1.5 -1.5,-1.5z"/>
+  <circle id="svg_43" r="1.5" fill="#FFFFFF" cy="9.114076" cx="8.420881"/>
+  <circle id="svg_44" r="1.5" fill="#FFFFFF" cy="9.114076" cx="4.420881"/>
+  <circle id="svg_45" r="1.5" fill="#FFFFFF" cy="9.114076" cx="36.420881"/>
+  <circle id="svg_46" r="1.5" fill="#FFFFFF" cy="9.114076" cx="32.420881"/>
+  <circle id="svg_47" r="1.5" fill="#FFFFFF" cy="5.130076" cx="8.420881"/>
+  <circle id="svg_48" r="1.5" fill="#FFFFFF" cy="5.130076" cx="4.420881"/>
+  <circle id="svg_49" r="1.5" fill="#FFFFFF" cy="12.964076" cx="16.420881"/>
+  <circle id="svg_50" r="1.5" fill="#FFFFFF" cy="12.964076" cx="12.420881"/>
+  <circle id="svg_51" r="1.5" fill="#FFFFFF" cy="9.114076" cx="16.420881"/>
+  <circle id="svg_52" r="1.5" fill="#FFFFFF" cy="9.114076" cx="12.420881"/>
+  <circle id="svg_53" r="1.5" fill="#FFFFFF" cy="5.130076" cx="16.420881"/>
+  <circle id="svg_54" r="1.5" fill="#FFFFFF" cy="5.130076" cx="12.420881"/>
+  <circle id="svg_55" r="1.5" fill="#FFFFFF" cy="12.964076" cx="24.420881"/>
+  <circle id="svg_56" r="1.5" fill="#FFFFFF" cy="12.964076" cx="20.420881"/>
+  <circle id="svg_57" r="1.5" fill="#FFFFFF" cy="9.114076" cx="24.420881"/>
+  <circle id="svg_58" r="1.5" fill="#FFFFFF" cy="9.114076" cx="20.420881"/>
+  <circle id="svg_59" r="1.5" fill="#FFFFFF" cy="5.130076" cx="24.420881"/>
+  <circle id="svg_60" r="1.5" fill="#FFFFFF" cy="12.964076" cx="28.420881"/>
+  <circle id="svg_61" r="1.5" fill="#FFFFFF" cy="9.114076" cx="28.420881"/>
+  <circle id="svg_62" r="1.5" fill="#FFFFFF" cy="5.130076" cx="28.420881"/>
+  <circle id="svg_63" r="1.5" fill="#FFFFFF" cy="5.130076" cx="20.420881"/>
+  <circle id="svg_64" r="1.5" fill="#FFFFFF" cy="5.130076" cx="36.420881"/>
+  <circle id="svg_65" r="1.5" fill="#FFFFFF" cy="5.130076" cx="32.420881"/>
+ </g>
+</svg>

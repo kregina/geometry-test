@@ -23,12 +23,26 @@
   <script type="module" src="main.js"></script>
 </head>
 
-<body id="body">
+<body id="body" class="preload">
+  <div class="loading" id="loading">
+    <svg class="loading-svg" viewBox="0 50 612 626" xml:space="preserve">
+        <g>
+          <path class ="triangle" fill="#E91E63" d="M516.625,365.599c23.65,0,38.436-24.892,26.609-44.8L454.54,171.467c-11.826-19.907-41.393-19.907-53.218,0
+            l-88.694,149.332c-11.825,19.908,2.959,44.8,26.609,44.8H516.625L516.625,365.599z"/>
+          <circle class="cricle" fill="#E91E63" cx="186.965" cy="500.534" r="119.466"/>
+          <path class="square" fill="#E91E63" d="M532.463,425.869v149.332c0,16.49-13.375,29.865-29.864,29.865H353.267
+            c-16.492,0-29.867-13.375-29.867-29.865V425.869c0-16.492,13.375-29.867,29.867-29.867h149.332
+            C519.088,396.002,532.463,409.377,532.463,425.869z"/>
+        </g>
+    </svg>
+  </div>
   <main>
     <div class="intro">
-      <h1 class="intro-text">
-        Hi! I'm Kelly and I'm front-end developer <i class="far fa-heart"></i>
-      </h1>
+      <div class="intro-text">
+        <p>Hi! I'm Kelly</p> 
+        <p>and I'm a front-end developer <i class="far fa-heart"></i></p>
+      </div>
+      <img class="intro-image" src="./images/keyboard.svg" alt="Keyboard">
     </div>
 
     <header class="header">
@@ -102,8 +116,11 @@
           <h3>How to play:</h3>
           <p>
               Click on 3 spots inside the marked space below and see the shapes and their coordinates.
-              You can drag the shapes along the space and the coordinates will be updated.
-              The game has a button on the side that you can clear the points with.
+          </p>
+          <p>
+              You can drag the <strong>red circles</strong> along the space and the coordinates will be updated.
+          </p>
+          <p>The game has a button on the side that you can clear the points with.</p>
 
               <pre>Enjoy!</pre>
           </p>

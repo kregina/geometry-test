@@ -21,20 +21,40 @@
   }
 }
 
-@keyframes typewriter {
-  from {
+
+@keyframes type {
+  0% {
     width: 0;
   }
-  to {
-    width: var(--intro-animation-size);
+  1% {
+    opacity: 1;
+  }
+  19% {
+    border-right: 1px solid rgba(var(--light-rgb), 0.75);
+  }
+  20%{
+    border: none;
+  }
+  100% {
+    opacity: 1;    
+    border: none;
   }
 }
 
-@keyframes blinkTextCursor {
-  from {
-    border-right-color: rgba(var(--light-rgb), 0.75);
+@keyframes type3 {
+  0% {
+    width: 0;
   }
-  to {
-    border-right-color: transparent;
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
   }
 }

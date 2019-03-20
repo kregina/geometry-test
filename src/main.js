@@ -19,7 +19,7 @@ const startGameButton = document.getElementById('start');
 const loading = document.getElementById('loading');
 const body = document.getElementById('body')
 
-// window.onload = _ => setTimeout(showPage, 2500);
+window.onload = _ => setTimeout(showPage, 2500);
 
 const headerEl = document.querySelector('.header')
 const introElement = document.querySelector('.intro')
@@ -92,7 +92,7 @@ const draw = () => {
   const paralelogramArea = triangleArea * 2;
   const ratio = Circle.ratio(paralelogramArea);
 
-  const paralelogramCircle = Svg.circle(center, ratio, '#FFC107');
+  const paralelogramCircle = Svg.circle(center, ratio, '#F9DC5C');
 
   areaParalelogramDiv.innerHTML = `Paralelogram Area: ${paralelogramArea.toFixed(2)}`;
   areaCircleDiv.innerHTML = `Yellow Circle Area: ${paralelogramArea.toFixed(2)}`;
@@ -141,17 +141,14 @@ const startDragSelectedElement = event => {
     selectedElement = event.target;
     offset = Svg.relativePositionFrom(svg, event);
 
-    // Make sure the first transform on the element is a translate transform
     let transforms = selectedElement.transform.baseVal;
 
     if (transforms.length === 0 || transforms.getItem(0).type !== SVGTransform.SVG_TRANSFORM_TRANSLATE) {
-      // Create an transform that translates by (0, 0)
       let translate = svg.createSVGTransform();
       translate.setTranslate(0, 0);
       selectedElement.transform.baseVal.insertItemBefore(translate, 0);
     }
 
-    // Get initial translation
     transform = transforms.getItem(0);
     offset[0] -= transform.matrix.e;
     offset[1] -= transform.matrix.f;
