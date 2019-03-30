@@ -91,7 +91,7 @@ strong {
 .intro-text p:nth-child(2) {
   width: 14em;
   opacity: 0;
-  animation: type3 3s steps(30, end), blink .5s step-end infinite alternate;
+  animation: type2 3s steps(30, end), blink .5s step-end infinite alternate;
   animation-delay: 5s;
   animation-fill-mode: forwards;
 }
