@@ -125,20 +125,25 @@ const clickHandler = event => {
     draw();
   }
 
-  const coordinatesCircle = Svg.createText(position);
+  const coordinates = Svg.createText(position);
 
   const circle = Svg.circle(position, 11, '#D50000', 'transparent');
   circle.classList.add('draggable');
   circle.dataset.index = interactions.length - 1;
 
-  svgScreenGroup.appendChild(coordinatesCircle);
-  svgScreenGroup.appendChild(circle);
+  const group = Svg.group();
+  group.appendChild(coordinates);
+  group.appendChild(circle);
+
+  svgScreenGroup.appendChild(group);
 }
 
 const startDragSelectedElement = event => {
   if (event.target.classList.contains('draggable')) {
     event.preventDefault();
-    selectedElement = event.target;
+    const circle = event.target;
+    const group = circle.parentElement;
+    selectedElement = group;
     offset = Svg.relativePositionFrom(svg, event);
 
     let transforms = selectedElement.transform.baseVal;
@@ -168,7 +173,8 @@ const endDragSelectedElement = evt => {
   if (!selectedElement)
     return;
 
-  interactions[selectedElement.dataset.index] = Svg.relativePositionFrom(svg, evt);
+  const circle = selectedElement.querySelector('circle');
+  interactions[circle.dataset.index] = Svg.relativePositionFrom(svg, evt);
 
   if (interactions.length >= 3)
     draw();
