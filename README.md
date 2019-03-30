@@ -26,7 +26,8 @@ To run this project you need:
 
 [NodeJs](https://nodejs.org/en/download/)
 
-A modern Browser.
+A modern Browser that supports css varibles.
+Check here [Can I Use](https://caniuse.com/#search=css%20variable)
 
 ### Installing and running
 
